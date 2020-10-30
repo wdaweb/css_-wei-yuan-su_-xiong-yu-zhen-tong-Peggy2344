@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .body {
+            position: relative;
+            width: 40px;
+            height: 120px;
+            background: #000;
+            border: 1px solid rgb(170, 170, 170);
+
+        }
+
+        .body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 40px;
+            width: 200px;
+            height: 120px;
+            background: whitesmoke;
+            border: 1px solid rgb(170, 170, 170);
+        }
+
+        .body::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 40px;
+            width: 200px;
+            height: 120px;
+            background: #ffa;
+            border: 1px solid rgb(170, 170, 170);
+            z-index: -100;
+        }
+
+        .box1::before {
+            content: '';
+            width: 60px;
+            height: 80px;
+            background: whitesmoke;
+            position: absolute;
+            right: 241px;
+            top: 20px;
+            border: 1px solid rgb(170, 170, 170);
+        }
+
+        .box1::after {
+            content: '';
+            width: 60px;
+            height: 80px;
+            background: whitesmoke;
+            position: absolute;
+            left: 241px;
+            top: 20px;
+            border: 1px solid rgb(170, 170, 170);
+            border-radius: 0 5px 5px 0;
+        }
+
+        .box2::before {
+            content: '';
+            width: 50px;
+            height: 110px;
+            border-radius: 5px;
+            background: whitesmoke;
+            border: 1px solid rgb(170, 170, 170);
+            position: absolute;
+            right: 300px;
+            top: 5px;
+        }
+
+        .box2::after {
+            content: '';
+            width: 100px;
+            height: 2px;
+            background: grey;
+            position: absolute;
+            top: 55px;
+            left: 302px;
+        }
+
+        .num1::before {
+            content: '';
+            width: 1px;
+            height: 18px;
+            background: #333;
+            position: absolute;
+            top: 0;
+            left: -10px;
+        }
+
+        .num2::before {
+            content: '';
+            width: 1px;
+            height: 18px;
+            background: #333;
+            position: absolute;
+            top: 0;
+            left: -25px;
+        }
+
+        .num3::before {
+            content: '';
+            width: 1px;
+            height: 18px;
+            background: #333;
+            position: absolute;
+            top: 0;
+            left: -40px;
+        }
+
+        .num4::before {
+            content: '';
+            width: 1px;
+            height: 18px;
+            background: #333;
+            position: absolute;
+            top: 0;
+            left: -55px;
+        }
+
+        .num5::before {
+            content: '';
+            width: 1px;
+            height: 18px;
+            background: #333;
+            position: absolute;
+            top: 0;
+            left: -70px;
+        }
+
+        .num6::before {
+            content: '';
+            width: 1px;
+            height: 18px;
+            background: #333;
+            position: absolute;
+            top: 0;
+            left: -85px;
+        }
+
+        .num7::before {
+            content: '';
+            width: 1px;
+            height: 18px;
+            background: #333;
+            position: absolute;
+            top: 0;
+            left: -100px;
+        }
+
+        .num8::before {
+            content: '';
+            width: 1px;
+            height: 18px;
+            background: #333;
+            position: absolute;
+            top: 0;
+            left: -115px;
+        }
+
+        .num9::before {
+            content: '';
+            width: 1px;
+            height: 18px;
+            background: #333;
+            position: absolute;
+            top: 0;
+            left: -130px;
+        }
+
+        .num10::before {
+            content: '';
+            width: 1px;
+            height: 18px;
+            background: #333;
+            position: absolute;
+            top: 0;
+            left: -145px;
+        }
+
+        .num11::before {
+            content: '';
+            width: 1px;
+            height: 18px;
+            background: #333;
+            position: absolute;
+            top: 0;
+            left: -160px;
+        }
+
+        .num12::before {
+            content: '';
+            width: 1px;
+            height: 18px;
+            background: #333;
+            position: absolute;
+            top: 0;
+            left: -175px;
+        }
+
+        .num13::before {
+            content: '';
+            width: 1px;
+            height: 18px;
+            background: #333;
+            position: absolute;
+            top: 0;
+            left: -190px;
+        }
+
+        .num1::after {
+            content: '';
+            width: 1px;
+            height: 18px;
+            background: #333;
+            position: absolute;
+            top: 0;
+            right: -10px;
+            z-index: 100;
+        }
+
+        .num2::after {
+            content: '';
+            width: 1px;
+            height: 18px;
+            background: #333;
+            position: absolute;
+            top: 0;
+            right: -25px;
+        }
+
+        .num3::after {
+            content: '';
+            width: 1px;
+            height: 18px;
+            background: #333;
+            position: absolute;
+            top: 0;
+            right: -40px;
+        }
+
+        .num4::after {
+            content: '';
+            width: 1px;
+            height: 18px;
+            background: #333;
+            position: absolute;
+            top: 0;
+            right: -55px;
+        }
+
+        .num5::after {
+            content: '';
+            width: 1px;
+            height: 18px;
+            background: #333;
+            position: absolute;
+            top: 0;
+            right: -70px;
+        }
+
+        .num6::after {
+            content: '';
+            width: 1px;
+            height: 18px;
+            background: #333;
+            position: absolute;
+            top: 0;
+            right: -85px;
+        }
+
+        .num7::after {
+            content: '';
+            width: 1px;
+            height: 18px;
+            background: #333;
+            position: absolute;
+            top: 0;
+            right: -100px;
+        }
+
+        .num8::after {
+            content: '';
+            width: 1px;
+            height: 18px;
+            background: #333;
+            position: absolute;
+            top: 0;
+            right: -115px;
+        }
+
+        .num9::after {
+            content: '';
+            width: 1px;
+            height: 18px;
+            background: #333;
+            position: absolute;
+            top: 0;
+            right: -130px;
+        }
+
+        .num10::after {
+            content: '';
+            width: 1px;
+            height: 18px;
+            background: #333;
+            position: absolute;
+            top: 0;
+            right: -145px;
+        }
+
+        .num11::after {
+            content: '';
+            width: 1px;
+            height: 18px;
+            background: #333;
+            position: absolute;
+            top: 0;
+            right: -160px;
+        }
+
+        .num12::after {
+            content: '';
+            width: 1px;
+            height: 18px;
+            background: #333;
+            position: absolute;
+            top: 0;
+            right: -175px;
+        }
+
+        .num13::after {
+            content: '';
+            width: 1px;
+            height: 18px;
+            background: #333;
+            position: absolute;
+            top: 0;
+            right: -190px;
+        }
+
+        .taiwan {
+            position: absolute;
+            left: -200px;
+            bottom: 0;
+            color: grey;
+            font-family: '微軟正黑體';
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="body">
+            <div class="taiwan">Made in Taiwan</div>
+            <div class="box1"></div>
+            <div class="box2"></div>
+            <div class="num1"></div>
+            <div class="num2"></div>
+            <div class="num3"></div>
+            <div class="num4"></div>
+            <div class="num5"></div>
+            <div class="num6"></div>
+            <div class="num7"></div>
+            <div class="num8"></div>
+            <div class="num9"></div>
+            <div class="num10"></div>
+            <div class="num11"></div>
+            <div class="num12"></div>
+            <div class="num13"></div>
+        </div>
+    </div>
+</body>
+
+</html>
